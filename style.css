@@ -1,0 +1,203 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #003366; /* KBTCOE Blue */
+    color: white;
+    padding: 1.5rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* --- HOME PAGE SPECIFIC --- */
+/* Hero Section with Image and Overlay */
+.hero {
+    height: 85vh;
+    background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Three-column Grid Layout */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 5%;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid #ffcc00;
+}
+
+/* --- ABOUT PAGE SPECIFIC --- */
+.page-banner {
+    background-color: #002244;
+    color: white;
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.split-layout {
+    display: flex;
+    gap: 4rem;
+    padding: 4rem 5%;
+    align-items: center;
+}
+
+.split-text {
+    flex: 1;
+}
+
+.split-image {
+    flex: 1;
+}
+
+.split-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* --- ACADEMICS PAGE SPECIFIC --- */
+.departments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 4rem 5%;
+}
+
+.dept-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.dept-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.dept-info {
+    padding: 1.5rem;
+}
+
+.dept-info h3 {
+    color: #003366;
+    margin-bottom: 0.5rem;
+}
+
+/* --- CONTACT PAGE SPECIFIC --- */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 4rem 5%;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Shared Typography & Spacing */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #003366;
+    margin: 4rem 0 2rem 0;
+}
+
+.container {
+    padding: 0 5%;
+}
+
+/* Footer */
+footer {
+    background-color: #001a33;
+    color: #ccc;
+    text-align: center;
+    padding: 2rem 5%;
+    margin-top: auto;
+}
