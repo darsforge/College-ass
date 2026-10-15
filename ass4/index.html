@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Employee Registration Form</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="intro">
+    <h1>Employee registration</h1>
+    <p>Create a staff account. Your badge on the right fills in as you type.</p>
+  </header>
+
+  <div class="layout">
+    <!-- ===== Registration form ===== -->
+    <section class="panel" id="formPanel" aria-labelledby="formTitle">
+      <h2 id="formTitle">Employee details</h2>
+
+      <form id="regForm" novalidate>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" autocomplete="name" maxlength="50"
+                 placeholder="e.g. Priya Sharma" aria-describedby="name-error">
+          <p class="error" id="name-error"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Work email</label>
+          <input type="email" id="email" name="email" autocomplete="email" maxlength="80"
+                 placeholder="name@company.com" aria-describedby="email-error">
+          <p class="error" id="email-error"></p>
+        </div>
+
+        <div class="row2">
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" maxlength="16"
+                   placeholder="98765 43210" aria-describedby="phone-hint phone-error">
+            <p class="hint" id="phone-hint">10-digit mobile number. +91 is optional.</p>
+            <p class="error" id="phone-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="department">Department</label>
+            <select id="department" name="department" aria-describedby="department-error">
+              <option value="">Select department</option>
+              <option>Engineering</option>
+              <option>Human Resources</option>
+              <option>Finance</option>
+              <option>Marketing</option>
+              <option>Sales</option>
+              <option>Operations</option>
+              <option>IT Support</option>
+            </select>
+            <p class="error" id="department-error"></p>
+          </div>
+        </div>
+
+        <div class="row2">
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="pw">
+              <input type="password" id="password" name="password" autocomplete="new-password" maxlength="64"
+                     aria-describedby="rules password-error">
+              <button type="button" class="toggle" data-target="password" aria-pressed="false" aria-label="Show password">Show</button>
+            </div>
+            <p class="error" id="password-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="confirm">Confirm password</label>
+            <div class="pw">
+              <input type="password" id="confirm" name="confirm" autocomplete="new-password" maxlength="64"
+                     aria-describedby="confirm-error">
+              <button type="button" class="toggle" data-target="confirm" aria-pressed="false" aria-label="Show confirm password">Show</button>
+            </div>
+            <p class="error" id="confirm-error"></p>
+          </div>
+        </div>
+
+        <div class="strength" aria-live="polite">
+          <div class="bar"><span id="strengthFill"></span></div>
+          <span id="strengthLabel">Password strength</span>
+        </div>
+        <ul class="rules" id="rules">
+          <li data-rule="len"><span class="mark">○</span> 8 or more characters</li>
+          <li data-rule="upper"><span class="mark">○</span> One uppercase letter</li>
+          <li data-rule="lower"><span class="mark">○</span> One lowercase letter</li>
+          <li data-rule="num"><span class="mark">○</span> One number</li>
+          <li data-rule="sym"><span class="mark">○</span> One special character</li>
+        </ul>
+
+        <p class="status" id="formStatus" role="alert"></p>
+
+        <div class="btns">
+          <button type="submit" class="primary">Register employee</button>
+          <button type="button" id="resetBtn">Clear form</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ===== Success message (hidden until registered) ===== -->
+    <section class="panel success" id="successPanel" hidden aria-labelledby="successTitle">
+      <h2 id="successTitle" tabindex="-1">Registration complete</h2>
+      <p>The employee account has been created. Details:</p>
+      <dl class="details" id="details"></dl>
+      <div class="btns">
+        <button type="button" class="primary" id="againBtn">Register another employee</button>
+      </div>
+    </section>
+
+    <!-- ===== Live badge preview ===== -->
+    <aside class="badge-col" aria-label="Employee badge preview">
+      <div class="badge" id="badge">
+        <div class="slot" aria-hidden="true"></div>
+        <div class="band" id="badgeBand"><span>Employee badge</span></div>
+        <div class="avatar" id="badgeAvatar" aria-hidden="true">?</div>
+        <div class="who">
+          <p class="b-name" id="badgeName">Your name</p>
+          <p class="b-dept" id="badgeDept">Department</p>
+        </div>
+        <dl class="b-meta">
+          <div><dt>Email</dt><dd id="badgeEmail">name@company.com</dd></div>
+          <div><dt>Employee ID</dt><dd id="badgeId">Assigned on registration</dd></div>
+        </dl>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

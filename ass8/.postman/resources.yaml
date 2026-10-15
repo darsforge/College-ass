@@ -1,0 +1,7 @@
+# Use this workspace to collaborate
+workspace:
+  id: 3da71a41-6952-4d57-86f9-5d1a7bdd7be8
+
+localResources:
+  collections:
+    - ../Student API

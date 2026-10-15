@@ -1,0 +1,25 @@
+$kind: http-request
+url: "{{baseUrl}}/api/students"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "Darshan Patil",
+      "rollNo": "IT101",
+      "email": "darshan@example.com",
+      "branch": "IT",
+      "year": 3,
+      "phone": "9876543210"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Status is 201', () => pm.response.to.have.status(201));
+      const s = pm.response.json();
+      pm.test('Has _id', () => pm.expect(s._id).to.be.a('string'));
+      pm.collectionVariables.set('studentId', s._id);
+    language: text/javascript
+order: 1000

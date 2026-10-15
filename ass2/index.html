@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Godavari Thali House - Maharashtrian thali restaurant in Nashik. View the menu, opening hours and reserve a table.">
+  <title>Godavari Thali House | Nashik</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER + NAVBAR ===== -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="#home">Godavari Thali House</a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+      <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span></span></label>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#timings">Timings</a></li>
+        <li><a href="#reserve" class="nav-cta">Reserve a table</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h1>A full thali, served the way Nashik eats it.</h1>
+        <p>Misal, bhakri, pithla and puran poli, cooked fresh every day in a kitchen that has not changed its recipes since 1998.</p>
+        <p class="hero-actions">
+          <a class="btn" href="#reserve">Reserve a table</a>
+          <a class="btn btn-ghost" href="#menu">See the menu</a>
+        </p>
+      </div>
+
+      <!-- Thali drawn with CSS only -->
+      <div class="thali" role="img" aria-label="Illustration of a thali plate with small bowls of food">
+        <span class="bowl b1"></span>
+        <span class="bowl b2"></span>
+        <span class="bowl b3"></span>
+        <span class="bowl b4"></span>
+        <span class="bowl b5"></span>
+        <span class="bowl b6"></span>
+        <span class="roti"></span>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section">
+      <h2>About us</h2>
+      <div class="about-grid">
+        <article>
+          <h3>Our kitchen</h3>
+          <p>Godavari Thali House started as a six-table mess near Panchavati. Today we serve about 300 plates a day, but the masala is still ground in-house every morning and the bhakri is still rolled by hand.</p>
+        </article>
+        <article>
+          <h3>What we cook with</h3>
+          <p>Jowar and bajra from farms around Sinnar, groundnut oil, and kala masala made from our own roasted spice blend. No ready-made gravies.</p>
+        </article>
+        <article>
+          <h3>Who we cook for</h3>
+          <p>Families, students and office groups. Every dish on the menu is marked as vegetarian or non-vegetarian, and we can reduce the spice on request.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== MENU (TABLES) ===== -->
+    <section id="menu" class="section section-tint">
+      <h2>Menu</h2>
+      <p class="lead">Prices are in rupees and include GST.</p>
+
+      <h3>Thalis</h3>
+      <div class="table-wrap">
+        <table>
+          <caption>Thali meals</caption>
+          <thead>
+            <tr>
+              <th scope="col">Dish</th>
+              <th scope="col">What comes with it</th>
+              <th scope="col">Type</th>
+              <th scope="col" class="num">Price (₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Godavari Veg Thali</th>
+              <td>2 bhakri, pithla, usal, varan-bhat, koshimbir, papad, sweet</td>
+              <td><span class="tag veg">Veg</span></td>
+              <td class="num">220</td>
+            </tr>
+            <tr>
+              <th scope="row">Kolhapuri Chicken Thali</th>
+              <td>2 bhakri, chicken rassa, sukka, rice, solkadhi</td>
+              <td><span class="tag nonveg">Non-veg</span></td>
+              <td class="num">320</td>
+            </tr>
+            <tr>
+              <th scope="row">Mini Thali</th>
+              <td>1 bhakri, one sabzi, varan-bhat, papad</td>
+              <td><span class="tag veg">Veg</span></td>
+              <td class="num">140</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Snacks and sweets</h3>
+      <div class="table-wrap">
+        <table>
+          <caption>Snacks and sweets</caption>
+          <thead>
+            <tr>
+              <th scope="col">Dish</th>
+              <th scope="col">Description</th>
+              <th scope="col">Type</th>
+              <th scope="col" class="num">Price (₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Nashik Misal Pav</th>
+              <td>Sprouted moth curry, farsan, onion, 2 pav</td>
+              <td><span class="tag veg">Veg</span></td>
+              <td class="num">110</td>
+            </tr>
+            <tr>
+              <th scope="row">Sabudana Khichdi</th>
+              <td>Sago, roasted peanuts, potato, curd on the side</td>
+              <td><span class="tag veg">Veg</span></td>
+              <td class="num">90</td>
+            </tr>
+            <tr>
+              <th scope="row">Puran Poli</th>
+              <td>Sweet chana dal filling, served with ghee</td>
+              <td><span class="tag veg">Veg</span></td>
+              <td class="num">70</td>
+            </tr>
+            <tr>
+              <th scope="row">Egg Bhurji with Pav</th>
+              <td>Spicy scrambled eggs, 2 pav</td>
+              <td><span class="tag nonveg">Non-veg</span></td>
+              <td class="num">100</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== TIMINGS (TABLE) ===== -->
+    <section id="timings" class="section">
+      <h2>Opening hours</h2>
+      <div class="table-wrap narrow">
+        <table>
+          <caption>Weekly opening hours</caption>
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Lunch</th>
+              <th scope="col">Dinner</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Monday to Friday</th><td>12:00 pm to 3:30 pm</td><td>7:00 pm to 10:30 pm</td></tr>
+            <tr><th scope="row">Saturday</th><td>12:00 pm to 4:00 pm</td><td>7:00 pm to 11:00 pm</td></tr>
+            <tr><th scope="row">Sunday</th><td>11:30 am to 4:30 pm</td><td>7:00 pm to 11:00 pm</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td colspan="3">Closed on Amavasya days for kitchen cleaning.</td></tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== RESERVATION FORM ===== -->
+    <section id="reserve" class="section section-tint">
+      <h2>Reserve a table</h2>
+      <p class="lead">Fill in the form and we will call you to confirm within 30 minutes.</p>
+
+      <form class="form" action="#reserve" method="get">
+
+        <fieldset>
+          <legend>Your details</legend>
+
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Darshan Patil" required pattern="[A-Za-z ]{2,}" title="Letters and spaces only">
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" required pattern="[0-9]{10}" maxlength="10" title="Enter exactly 10 digits">
+          </div>
+
+          <div class="field">
+            <label for="email">Email (optional)</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Booking</legend>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="date">Date</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+            <div class="field">
+              <label for="time">Time</label>
+              <input type="time" id="time" name="time" min="11:30" max="22:30" required>
+            </div>
+            <div class="field">
+              <label for="guests">Guests</label>
+              <input type="number" id="guests" name="guests" min="1" max="20" value="2" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="seating">Seating</label>
+            <select id="seating" name="seating">
+              <option value="indoor">Indoor (air-conditioned)</option>
+              <option value="garden">Garden</option>
+              <option value="family">Family cabin</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <span class="label-like">Meal</span>
+            <div class="choices">
+              <label><input type="radio" name="meal" value="lunch" checked> Lunch</label>
+              <label><input type="radio" name="meal" value="dinner"> Dinner</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="label-like">Preferences</span>
+            <div class="choices">
+              <label><input type="checkbox" name="pref" value="jain"> Jain food</label>
+              <label><input type="checkbox" name="pref" value="lowspice"> Less spicy</label>
+              <label><input type="checkbox" name="pref" value="highchair"> Child seat needed</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="notes">Special requests</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Birthday, allergies, anything we should know"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Request booking</button>
+          <button type="reset" class="btn btn-ghost">Clear form</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section">
+      <h2>Find us</h2>
+      <address>
+        Godavari Thali House<br>
+        12, Ramkund Road, Panchavati<br>
+        Nashik, Maharashtra 422003<br><br>
+        Phone: <a href="tel:+910000000000">+91 00000 00000</a><br>
+        Email: <a href="mailto:hello@godavarithali.example">hello@godavarithali.example</a>
+      </address>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Godavari Thali House. College mini project, built with HTML5 and CSS3.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+$kind: http-request
+url: "{{baseUrl}}/api/students"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "Darshan Patil",
+      "rollNo": "IT101",
+      "email": "darshan@example.com",
+      "branch": "IT",
+      "year": 3,
+      "phone": "9876543210"
+    }
+scripts:
+  - type: afterResponse
+    code: pm.test('Status is 409', () => pm.response.to.have.status(409));
+    language: text/javascript
+order: 6000

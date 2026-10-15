@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Student Result Management System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>Student Result Management System</h1>
+    <p>Enter a student's marks and the total, percentage, grade and class rank are worked out for you. The topper is picked automatically.</p>
+  </header>
+
+  <dl class="summary" aria-label="Class summary">
+    <div><dt>Students</dt><dd id="sCount">0</dd></div>
+    <div><dt>Class average</dt><dd id="sAvg">–</dd></div>
+    <div><dt>Passed</dt><dd id="sPass">–</dd></div>
+    <div><dt>Highest percentage</dt><dd id="sHigh">–</dd></div>
+  </dl>
+
+  <div class="layout">
+    <section class="entry" aria-labelledby="formTitle">
+      <h2 id="formTitle">Add student</h2>
+      <form id="form" novalidate autocomplete="off">
+        <div class="field">
+          <label for="name">Student name</label>
+          <input type="text" id="name" maxlength="60" placeholder="e.g. Aarav Patil">
+        </div>
+        <div class="field">
+          <label for="roll">Roll number</label>
+          <input type="text" id="roll" maxlength="12" placeholder="e.g. 101">
+        </div>
+        <fieldset>
+          <legend>Marks <span>(out of 100 each)</span></legend>
+          <div class="marks" id="marksGrid"></div>
+        </fieldset>
+        <div class="live" id="live" aria-live="polite">Total 0 of 500, 0.00%</div>
+        <p class="error" id="error" role="alert"></p>
+        <div class="btns">
+          <button type="submit" class="primary" id="submitBtn">Add student</button>
+          <button type="button" id="cancelBtn" hidden>Cancel edit</button>
+          <button type="button" id="resetBtn">Clear form</button>
+        </div>
+      </form>
+    </section>
+
+    <section aria-label="Results">
+      <div id="topper"></div>
+
+      <div class="records">
+        <div class="records-head">
+          <h2>Student records</h2>
+          <div class="tools">
+            <label for="search" class="sr">Search by name or roll number</label>
+            <input type="search" id="search" placeholder="Search name or roll no.">
+            <button type="button" class="danger" id="clearAll">Delete all</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr id="thead"></tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+          <div class="none" id="none" hidden></div>
+        </div>
+        <p class="foot">Records are ranked by total marks, highest first. Students with equal totals share a rank. A student passes when every subject is 35 or above. Grades by percentage: A+ 90, A 80, B+ 70, B 60, C 50, D below 50; any failed subject gives F.</p>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
